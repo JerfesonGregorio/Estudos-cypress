@@ -3,8 +3,7 @@
 # Cypress
 cypress/videos/
 cypress/screenshots/
-cypress/fixtures/
-cypress.env.json
+
 
 # Node.js
 node_modules/
