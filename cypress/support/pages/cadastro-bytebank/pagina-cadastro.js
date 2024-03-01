@@ -1,11 +1,10 @@
 const el = require('./elements').ELEMENTS;
-const env = Cypress.env()
+const env = Cypress.env();
 
 class CadastroBank {
 
     acessarPaginaCadastro() {
 
-        cy.visit('http://localhost:3000/');
         cy.get(el.btnCadastro).click();
 
     }
@@ -17,7 +16,7 @@ class CadastroBank {
         cy.get(el.senha).type(env.password);
         cy.get(el.check).click();
         cy.get(el.submeter).click();
-        cy.get(el.mensagemSucesso).contains('Usuário cadastrado com sucesso!')
+        cy.get(el.mensagemSucesso).contains('Usuário cadastrado com sucesso!').should('be.visible')
 
     }
 }
